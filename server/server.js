@@ -66,7 +66,7 @@ app.get("/bookings", async (req, res) => {
     const bookings = result.rows;
     res.status(200).json(bookings);
   } catch (error) {
-    res.status(400).json({ error: "Fetch" });
+    res.status(400).json({ error: error });
   }
 });
 
